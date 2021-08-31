@@ -4,4 +4,10 @@
     <string name="login">Login</string>
     <string name="signUp">Sign up</string>
     <string name="cd_Logo">Radiate logo</string>
+
+    <string name="done">Done</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="enterEmail">Enter email address</string>
+    <string name="enterPassword">Enter password</string>
 </resources>

@@ -11,7 +11,8 @@
     <color name="blue">#4B9BE9</color>
     <color name="grey">#C1C1C1</color>
 
-    <color name="Background">#FFFFFFFF</color>
+
+    <color name="Background">#323738</color>
 
     <color name="mainTextLight">#030303</color>
     <color name="mainTextDark">#FFFFFF</color>

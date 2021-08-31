@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/Background"
     tools:context=".MainActivity">
 
     <Button
@@ -16,6 +17,7 @@
         android:backgroundTint="@color/black"
         android:text="@string/login"
         android:textAllCaps="false"
+        android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,6 +35,7 @@
         android:backgroundTint="@color/blue"
         android:text="@string/signUp"
         android:textAllCaps="false"
+        android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,13 +49,12 @@
         android:layout_width="275dp"
         android:layout_height="75dp"
         android:layout_marginEnd="10dp"
-        android:backgroundTint="@android:color/transparent"
+        android:background="@drawable/logo"
         android:contentDescription="@string/cd_Logo"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@mipmap/logo" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
