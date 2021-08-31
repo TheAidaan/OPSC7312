@@ -10,11 +10,11 @@
     <color name="white">#FFFFFFFF</color>
     <color name="blue">#4B9BE9</color>
     <color name="grey">#C1C1C1</color>
+    <color name="green">#BED881</color>
+    <color name="red">#D44C4C</color>
 
     <color name="Background">#FFFFFFFF</color>
 
-    <color name="mainTextLight">#030303</color>
-    <color name="mainTextDark">#FFFFFF</color>
-    <color name="subTextLight">#4F4F4F</color>
-    <color name="subTextDark">#4F4F4F</color>
+    <color name="mainText">#030303</color>
+    <color name="subText">#4F4F4F</color>
 </resources>

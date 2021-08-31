@@ -14,8 +14,6 @@
 
     <color name="Background">#323738</color>
 
-    <color name="mainTextLight">#030303</color>
-    <color name="mainTextDark">#FFFFFF</color>
-    <color name="subTextLight">#4F4F4F</color>
-    <color name="subTextDark">#4F4F4F</color>
+    <color name="mainText">#FFFFFF</color>
+    <color name="subText">#4F4F4F</color>
 </resources>
