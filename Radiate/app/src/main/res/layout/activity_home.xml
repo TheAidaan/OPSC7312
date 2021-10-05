@@ -7,80 +7,11 @@
     android:backgroundTint="@color/Background"
     tools:context=".HomeActivity">
 
-    <fragment
-        android:id="@+id/map_homepage"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/map_Home"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="300dp"
-        android:layout_marginBottom="50dp"
-
-        android:backgroundTint="@color/Background"
-        app:cardCornerRadius="75dp"
-        app:cardElevation="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
-
-        <ImageView
-            android:id="@+id/btn_categories_homepage"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="2dp"
-            android:background="@mipmap/star"
-            android:backgroundTint="@color/mainText"
-            android:contentDescription="@string/cd_Category"
-            app:layout_constraintBottom_toBottomOf="parent" />
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="300dp"
-
-        android:backgroundTint="@color/Background"
-        app:cardCornerRadius="75dp"
-        app:cardElevation="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
-
-        <ImageView
-            android:id="@+id/btn_profile_homepage"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="2dp"
-            android:background="@mipmap/profile"
-            android:backgroundTint="@color/mainText"
-            android:contentDescription="@string/cd_Profile"
-            app:layout_constraintBottom_toBottomOf="parent" />
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="25dp"
-        android:backgroundTint="@color/Background"
-
-        app:cardCornerRadius="75dp"
-        app:cardElevation="10dp"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -88,45 +19,113 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
-        <ImageView
-            android:id="@+id/btn_current_Location_homepage"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="2dp"
-            android:background="@mipmap/current_location"
-            android:backgroundTint="@color/mainText"
-            android:contentDescription="@string/cd_CurrentLocation"
-            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.fragment.app.FragmentContainerView>
 
-    </androidx.cardview.widget.CardView>
+    <ImageButton
+        android:id="@+id/btn_CurrentLocation_Home"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="35dp"
+        android:background="@drawable/buttons_circle"
+        android:backgroundTint="@color/Background"
+        android:contentDescription="@string/cd_CurrentLocation"
+        android:elevation="10dp"
+        android:padding="10dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/current_location"
+        app:layout_constraintBottom_toBottomOf="@+id/map_Home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:tint="@color/mainText" />
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+
+    <ImageButton
+        android:id="@+id/btn_Profile_Home"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/buttons_circle"
+        android:backgroundTint="@color/Background"
+        android:contentDescription="@string/cd_Profile"
+        android:elevation="10dp"
+        android:padding="10dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/profile"
+        app:layout_constraintBottom_toBottomOf="@+id/map_Home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:tint="@color/mainText" />
+
+    <ImageButton
+        android:id="@+id/btn_Filter_Home"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginTop="25dp"
-
-        android:layout_marginEnd="25dp"
+        android:layout_marginEnd="35dp"
+        android:background="@drawable/buttons_circle"
         android:backgroundTint="@color/Background"
-        app:cardCornerRadius="75dp"
-        app:cardElevation="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="@string/cd_Filter"
+        android:elevation="10dp"
+        android:padding="10dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/filter"
+        app:layout_constraintBottom_toBottomOf="@+id/map_Home"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/btn_CurrentLocation_Home"
+        app:layout_constraintVertical_bias="0.0"
+        app:tint="@color/mainText" />
+
+    <ImageButton
+        android:id="@+id/btn_Categories_Home"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/buttons_circle"
+        android:backgroundTint="@color/Background"
+        android:contentDescription="@string/cd_Category"
+        android:elevation="10dp"
+        android:padding="10dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/star"
+        app:layout_constraintBottom_toBottomOf="@+id/map_Home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:tint="@color/mainText" />
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/buttons_circle"
+        android:backgroundTint="@color/Background"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
-        <ImageView
-            android:id="@+id/btn_filter_homepage"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="2dp"
-            android:background="@mipmap/filter"
-            android:backgroundTint="@color/mainText"
-            android:contentDescription="@string/cd_Filter"
-            app:layout_constraintBottom_toBottomOf="parent" />
-    </androidx.cardview.widget.CardView>
+        <SearchView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:iconifiedByDefault="true">
+
+        </SearchView>
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,7 +4,7 @@
     android:layout_width="315dp"
     android:layout_height="544dp"
     android:layout_gravity="center"
-    android:background="@drawable/box"
+    android:background="@drawable/popup_box"
     android:backgroundTint="@color/Background"
     android:elevation="10dp"
     android:orientation="vertical">
@@ -42,7 +42,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="266dp"
             android:layout_height="36dp"
-            android:background="@drawable/box"
+            android:background="@drawable/popup_box"
             android:backgroundTint="@color/grey"
             android:hint="@string/enterName"
             android:textColor="@color/mainText" />
@@ -60,7 +60,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="266dp"
             android:layout_height="36dp"
-            android:background="@drawable/box"
+            android:background="@drawable/popup_box"
             android:backgroundTint="@color/grey"
             android:hint="@string/enterEmail"
             android:textColor="@color/mainText" />
@@ -79,7 +79,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="266dp"
             android:layout_height="36dp"
-            android:background="@drawable/box"
+            android:background="@drawable/popup_box"
             android:backgroundTint="@color/grey"
             android:hint="@string/confirmEmail"
             android:textColor="@color/mainText" />
@@ -98,7 +98,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="266dp"
             android:layout_height="36dp"
-            android:background="@drawable/box"
+            android:background="@drawable/popup_box"
             android:backgroundTint="@color/grey"
             android:hint="@string/enterPassword"
             android:textColor="@color/mainText" />
@@ -116,7 +116,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="266dp"
             android:layout_height="36dp"
-            android:background="@drawable/box"
+            android:background="@drawable/popup_box"
             android:backgroundTint="@color/grey"
             android:hint="@string/confirmPassword"
             android:textColor="@color/mainText" />
@@ -128,7 +128,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginBottom="10dp"
-        android:background="@drawable/buttons"
+        android:background="@drawable/buttons_round_corners"
         android:text="@string/done"
         app:backgroundTint="@color/blue" />
 
@@ -144,7 +144,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="25dp"
             android:layout_weight="1"
-            android:background="@drawable/buttons"
+            android:background="@drawable/buttons_round_corners"
             android:text="@string/cancel"
             app:backgroundTint="@color/red" />
 
@@ -154,7 +154,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
             android:layout_weight="1"
-            android:background="@drawable/buttons"
+            android:background="@drawable/buttons_round_corners"
             android:text="Button"
             app:backgroundTint="@color/green" />
 

@@ -1,5 +1,8 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Radiate</string>
+    <string name = "map_key" translatable="false">
+        AIzaSyDbD3RgtO09Z-4wyPPAScv3BsWk47u4tRY
+    </string>
 
     <string name="login">Login</string>
     <string name="signUp">Sign up</string>
