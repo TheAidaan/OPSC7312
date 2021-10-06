@@ -8,7 +8,7 @@
     tools:context=".HomeActivity">
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/map_Home"
+        android:id="@+id/map_home"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -22,7 +22,7 @@
     </androidx.fragment.app.FragmentContainerView>
 
     <ImageButton
-        android:id="@+id/btn_CurrentLocation_Home"
+        android:id="@+id/btn_CurrentLocation_home"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="60dp"
@@ -34,7 +34,7 @@
         android:padding="10dp"
         android:scaleType="fitXY"
         android:src="@mipmap/current_location"
-        app:layout_constraintBottom_toBottomOf="@+id/map_Home"
+        app:layout_constraintBottom_toBottomOf="@+id/map_home"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,7 +44,7 @@
 
 
     <ImageButton
-        android:id="@+id/btn_Profile_Home"
+        android:id="@+id/btn_Profile_home"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="35dp"
@@ -56,7 +56,7 @@
         android:padding="10dp"
         android:scaleType="fitXY"
         android:src="@mipmap/profile"
-        app:layout_constraintBottom_toBottomOf="@+id/map_Home"
+        app:layout_constraintBottom_toBottomOf="@+id/map_home"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,7 +65,7 @@
         app:tint="@color/mainText" />
 
     <ImageButton
-        android:id="@+id/btn_Filter_Home"
+        android:id="@+id/btn_Filter_home"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="25dp"
@@ -77,16 +77,16 @@
         android:padding="10dp"
         android:scaleType="fitXY"
         android:src="@mipmap/filter"
-        app:layout_constraintBottom_toBottomOf="@+id/map_Home"
+        app:layout_constraintBottom_toBottomOf="@+id/map_home"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_CurrentLocation_Home"
+        app:layout_constraintTop_toBottomOf="@+id/btn_CurrentLocation_home"
         app:layout_constraintVertical_bias="0.0"
         app:tint="@color/mainText" />
 
     <ImageButton
-        android:id="@+id/btn_Categories_Home"
+        android:id="@+id/btn_Categories_home"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="35dp"
@@ -98,7 +98,7 @@
         android:padding="10dp"
         android:scaleType="fitXY"
         android:src="@mipmap/star"
-        app:layout_constraintBottom_toBottomOf="@+id/map_Home"
+        app:layout_constraintBottom_toBottomOf="@+id/map_home"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -120,6 +120,7 @@
         app:layout_constraintVertical_bias="0.0">
 
         <SearchView
+            android:id="@+id/svSearch_home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:iconifiedByDefault="true">
