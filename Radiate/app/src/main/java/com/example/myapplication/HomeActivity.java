@@ -11,7 +11,9 @@ import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.SearchView;
 import android.widget.Toast;
 
@@ -25,6 +27,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -43,7 +46,7 @@ public class HomeActivity extends FragmentActivity implements OnMapReadyCallback
 
     Boolean  _showCurrentLocation = false;
 
-
+    BottomSheetBehavior _location;
 
 
     @Override
@@ -51,10 +54,14 @@ public class HomeActivity extends FragmentActivity implements OnMapReadyCallback
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        _mapFragment  = (SupportMapFragment)getSupportFragmentManager().findFragmentById(R.id.map_home);
-        _mapFragment.getMapAsync(this::onMapReady);
 
-        /*_searchView  = findViewById(R.id.svSearch_home);
+        _mapFragment  = (SupportMapFragment)getSupportFragmentManager().findFragmentById(R.id.map_home);
+
+        LinearLayout linearLayout = findViewById(R.id.ll_standard_slideUpMenu);
+        _location = BottomSheetBehavior.from(linearLayout);
+        _location.setState(BottomSheetBehavior.STATE_HIDDEN);
+
+        _searchView  = findViewById(R.id.svSearch_home);
         _searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -64,7 +71,7 @@ public class HomeActivity extends FragmentActivity implements OnMapReadyCallback
                 if(location != null || !location.equals("")){
                     Geocoder geocoder = new Geocoder(HomeActivity.this);
                     try {
-                        addressList = geocoder.getFromLocationName(location,2);
+                        addressList = geocoder.getFromLocationName(location,1);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -81,8 +88,9 @@ public class HomeActivity extends FragmentActivity implements OnMapReadyCallback
             public boolean onQueryTextChange(String newText) {
                 return false;
             }
-        });*/
+        });
 
+        _mapFragment.getMapAsync(this::onMapReady);
 
 
 

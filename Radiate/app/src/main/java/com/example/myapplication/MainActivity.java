@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
         _dialog = new Dialog(this);
 
+
         //region night mode for activity
 
         _isNightModeOn = _appSettingPrefs.getBoolean("NightMode",false); //check the variable status

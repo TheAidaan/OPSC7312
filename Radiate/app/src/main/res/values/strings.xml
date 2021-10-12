@@ -3,6 +3,7 @@
     <string name = "map_key" translatable="false">
         AIzaSyDbD3RgtO09Z-4wyPPAScv3BsWk47u4tRY
     </string>
+    <string name="Default">Default</string>
 
     <string name="login">Login</string>
     <string name="signUp">Sign up</string>
@@ -11,12 +12,25 @@
     <string name="cancel">Cancel</string>
 
     <string name="enterName">Enter name</string>
+    <string name="changeName">Change name</string>
 
     <string name="enterEmail">Enter email address</string>
     <string name="confirmEmail">Confirm email address</string>
+    <string name="changeEmail">Change email address</string>
 
     <string name="enterPassword">Enter password</string>
     <string name="confirmPassword">Confirm password</string>
+    <string name="changePassword">Change password</string>\
+
+
+    <string name="unitSystem">Unit System</string>
+    <string name="darkMode">Dark Mode</string>
+    <string name="deleteAccount">Delete Account</string>
+    <string name="signOut">Sign Out</string>
+
+    <string name="AccountHeader">Account Settings</string>
+    <string name="AppHeader">App Settings</string>
+
     <string name="title_activity_home">HomeActivity</string>
     <!--
     This string is used for square devices and overridden by hello_world in
@@ -31,5 +45,8 @@
     <string name="cd_Filter">Filter icon</string>
     <string name="cd_Category">Star icon</string>
     <string name="cd_CurrentLocation">GPS icon</string>
+    <string name="cd_Navigate">Navigate icon</string>
+    <string name="cd_Divider">Navigate icon</string>
+
 
 </resources>
