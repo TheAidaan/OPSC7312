@@ -14,10 +14,12 @@
         <entry key="..\:/OneDrive - Vega School/3rth year/OPSC7312/Project Files/Radiate/app/src/main/res/layout/standard_slideup_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/OneDrive - Vega School/3rth year/OPSC7312/Project Files/Radiate/app/src/main/res/layout/standard_slideup_menutest.xml" value="0.2" />
         <entry key="..\:/OneDrive - Vega School/3rth year/OPSC7312/Project Files/Radiate/app/src/main/res/menu/settings_menu.xml" value="0.2" />
+        <entry key="..\:/Users/Jonathan/Documents/GitHub/OPSC7312/Radiate/app/src/main/res/layout/login_popup.xml" value="0.29375" />
+        <entry key="..\:/Users/Jonathan/Documents/GitHub/OPSC7312/Radiate/app/src/main/res/layout/signup_popup.xml" value="0.29375" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

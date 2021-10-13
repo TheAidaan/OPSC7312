@@ -39,6 +39,7 @@
         app:hintEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextEmail_LoginPopup"
             android:layout_width="266dp"
             android:layout_height="36dp"
             android:background="@drawable/popup_box"
@@ -57,6 +58,7 @@
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextPassword_LoginPopup"
             android:layout_width="266dp"
             android:layout_height="36dp"
             android:background="@drawable/popup_box"

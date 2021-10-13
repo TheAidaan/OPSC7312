@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="315dp"
-    android:layout_height="544dp"
+    android:layout_height="650dp"
     android:layout_gravity="center"
     android:background="@drawable/popup_box"
     android:backgroundTint="@color/Background"
@@ -40,8 +40,9 @@
         app:hintEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextUsername_signUpPopup"
             android:layout_width="266dp"
-            android:layout_height="36dp"
+            android:layout_height="match_parent"
             android:background="@drawable/popup_box"
             android:backgroundTint="@color/grey"
             android:hint="@string/enterName"
@@ -58,8 +59,9 @@
         app:hintEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextEmail_signUpPopup"
             android:layout_width="266dp"
-            android:layout_height="36dp"
+            android:layout_height="match_parent"
             android:background="@drawable/popup_box"
             android:backgroundTint="@color/grey"
             android:hint="@string/enterEmail"
@@ -77,8 +79,9 @@
         app:hintEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextConfirmEmail_signUpPopup"
             android:layout_width="266dp"
-            android:layout_height="36dp"
+            android:layout_height="match_parent"
             android:background="@drawable/popup_box"
             android:backgroundTint="@color/grey"
             android:hint="@string/confirmEmail"
@@ -96,8 +99,9 @@
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextPassword_signUpPopup"
             android:layout_width="266dp"
-            android:layout_height="36dp"
+            android:layout_height="match_parent"
             android:background="@drawable/popup_box"
             android:backgroundTint="@color/grey"
             android:hint="@string/enterPassword"
@@ -114,23 +118,14 @@
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextConfirmPassword_signUpPopup"
             android:layout_width="266dp"
-            android:layout_height="36dp"
+            android:layout_height="match_parent"
             android:background="@drawable/popup_box"
             android:backgroundTint="@color/grey"
             android:hint="@string/confirmPassword"
             android:textColor="@color/mainText" />
     </com.google.android.material.textfield.TextInputLayout>
-
-    <Button
-        android:id="@+id/btnDone_signUpPopup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/buttons_round_corners"
-        android:text="@string/done"
-        app:backgroundTint="@color/blue" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -141,7 +136,7 @@
         <Button
             android:id="@+id/btnCancel_signUpPopup"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_marginRight="25dp"
             android:layout_weight="1"
             android:background="@drawable/buttons_round_corners"
@@ -149,14 +144,14 @@
             app:backgroundTint="@color/red" />
 
         <Button
-            android:id="@+id/btnSignUpGoogle_SignUpPopup"
+            android:id="@+id/btnDone_signUpPopup"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_weight="1"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/buttons_round_corners"
-            android:text="Button"
-            app:backgroundTint="@color/green" />
+            android:text="@string/done"
+            app:backgroundTint="@color/blue" />
 
     </LinearLayout>
 
