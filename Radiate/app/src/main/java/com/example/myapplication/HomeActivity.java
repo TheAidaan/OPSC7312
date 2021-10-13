@@ -2,6 +2,8 @@ package com.example.myapplication;
 
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentActivity;
 
 import android.Manifest;
@@ -24,6 +26,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -33,21 +36,17 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HomeActivity extends FragmentActivity implements OnMapReadyCallback {
+public class HomeActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
     GoogleMap _map;
     SupportMapFragment _mapFragment;
 
-    FusedLocationProviderClient _fusedLocationProviderClient;
-    static final int REQUEST_CODE = 101;
     Location _currentLocation;
 
-    SearchView _searchView;
     Address _address;
 
     Boolean  _showCurrentLocation = false;
 
     BottomSheetBehavior _location;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,11 +60,11 @@ public class HomeActivity extends FragmentActivity implements OnMapReadyCallback
         _location = BottomSheetBehavior.from(linearLayout);
         _location.setState(BottomSheetBehavior.STATE_HIDDEN);
 
-        _searchView  = findViewById(R.id.svSearch_home);
-        _searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+        /*SearchView searchView  = findViewById(R.id.svSearch_home);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                String location = _searchView.getQuery().toString();
+                String location = searchView.getQuery().toString();
                 List<Address> addressList = null;
 
                 if(location != null || !location.equals("")){
@@ -77,6 +76,8 @@ public class HomeActivity extends FragmentActivity implements OnMapReadyCallback
                     }
                     Address address = addressList.get(0);
                     LatLng latLng = new LatLng(address.getLatitude(),address.getLongitude());
+                    MarkerOptions marker = new MarkerOptions();
+                    marker.position(latLng);
                     _map.addMarker(new MarkerOptions().position(latLng).title(location));
                     _map.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,10));
 
@@ -88,11 +89,9 @@ public class HomeActivity extends FragmentActivity implements OnMapReadyCallback
             public boolean onQueryTextChange(String newText) {
                 return false;
             }
-        });
+        });*/
 
         _mapFragment.getMapAsync(this::onMapReady);
-
-
 
         ImageButton btnCurrentLocation  = findViewById(R.id.btn_CurrentLocation_home);
         btnCurrentLocation.setOnClickListener(new View.OnClickListener() {
@@ -106,23 +105,22 @@ public class HomeActivity extends FragmentActivity implements OnMapReadyCallback
 
 //region Current Location
     void ShowCurrentLocation(){
-        _fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
-        FetchLastLocation();
+        FusedLocationProviderClient fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+        getCurrentLocation(fusedLocationProviderClient);
 
     }
-    void FetchLastLocation() {
+    void getCurrentLocation(FusedLocationProviderClient fusedLocationProviderClient) {
         _showCurrentLocation = true;
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION},REQUEST_CODE);
+                ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION},101);
                 return;
         }
-        Task<Location> task = _fusedLocationProviderClient.getLastLocation();
+        Task<Location> task = fusedLocationProviderClient.getLastLocation();
         task.addOnSuccessListener(new OnSuccessListener<Location>() {
             @Override
             public void onSuccess(Location location) {
                 if (location !=null){
                     _currentLocation = location;
-                    Toast.makeText(getApplicationContext(),location.getLatitude() + " " + location.getLongitude(), Toast.LENGTH_SHORT).show();
                     SupportMapFragment supportMapFragment = (SupportMapFragment)getSupportFragmentManager().findFragmentById(R.id.map_home);
                     supportMapFragment.getMapAsync(HomeActivity.this::onMapReady);
                     _map.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(location.getLatitude(), location.getLongitude()),10));
@@ -136,9 +134,12 @@ public class HomeActivity extends FragmentActivity implements OnMapReadyCallback
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
 
         switch (requestCode) {
-            case REQUEST_CODE:
+            case 101:
                 if (grantResults.length>0 && grantResults[0] == PackageManager.PERMISSION_GRANTED && _showCurrentLocation)
-                    FetchLastLocation();
+                {
+                    FusedLocationProviderClient fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+                    getCurrentLocation(fusedLocationProviderClient);
+                }
                 break;
         }
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -150,8 +151,18 @@ public class HomeActivity extends FragmentActivity implements OnMapReadyCallback
 
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
+
         _map = googleMap;
+
+        _map.setOnMarkerClickListener(this::onMarkerClick);
     }
 
 
+    @Override
+    public boolean onMarkerClick(@NonNull Marker marker) {
+
+        _location.setState(BottomSheetBehavior.STATE_COLLAPSED);
+
+        return false;
+    }
 }
