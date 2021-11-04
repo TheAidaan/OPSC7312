@@ -13,9 +13,12 @@
         <entry key="..\:/OneDrive - Vega School/3rth year/OPSC7312/Project Files/Radiate/app/src/main/res/layout/standard_slide_menu.xml" value="0.264" />
         <entry key="..\:/OneDrive - Vega School/3rth year/OPSC7312/Project Files/Radiate/app/src/main/res/layout/standard_slideup_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/OneDrive - Vega School/3rth year/OPSC7312/Project Files/Radiate/app/src/main/res/layout/standard_slideup_menutest.xml" value="0.2" />
+<<<<<<< HEAD
         <entry key="..\:/OneDrive - Vega School/3rth year/OPSC7312/Project Files/Radiate/app/src/main/res/menu/settings_menu.xml" value="0.2" />
         <entry key="..\:/Users/Jonathan/Documents/GitHub/OPSC7312/Radiate/app/src/main/res/layout/login_popup.xml" value="0.29375" />
         <entry key="..\:/Users/Jonathan/Documents/GitHub/OPSC7312/Radiate/app/src/main/res/layout/signup_popup.xml" value="0.29375" />
+=======
+>>>>>>> parent of f4425f8 (a few changes)
       </map>
     </option>
   </component>
